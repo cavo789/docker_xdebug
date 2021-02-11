@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  xdebug:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: xdebug
+    container_name: xdebug
+    environment:
+      PHP_EXTENSION_XDEBUG: 1
+    ports:
+      - "80:80"
+    volumes:
+      - "./src:/var/www/html"
