@@ -4,8 +4,8 @@
 
 * Make sure [Docker](https://www.docker.com/products/docker-desktop) is installed,
 * Make sure you've installed the [PHP Debug](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug) vscode addon of **Felix Becker**,
-* Clone this repo in f.i. the `c:\repositories\` folder,
-* In a DOS Prompt Session, go inside the folder of this project (`cd c:\repositories\docker_xdebug`),
+* Clone this repo in f.i. the `~/repos/` folder,
+* In a DOS Prompt Session, go inside the folder of this project (`cd ~/repos/docker_xdebug`),
 * Run `docker-compose up --build -d` and wait until the image has been created,
 * Test the image: surf to `http://localhost/?name=John Doe` and you must see *Hello John Doe!*,
 * Open Visual Studio Code and edit the `src/index.php` file,
@@ -14,7 +14,7 @@
   ![index with breakpoint](./images/index.png)
 
 * Press <kbd>F5</kbd> to start a new debug instance,  
-* If vscode ask for a configuration, select `Listen for XDebug - Docker app`.  You'll see the debug toolbar and the color of the vscode statusbar will change to orange (default color)
+* If vscode ask for a configuration, select `Listen for XDebug - Docker app`. You'll see the debug toolbar and the color of the vscode statusbar will change to orange (default color)
 
   ![vscode deb ug toolbar](./images/debug_toolbar.png)
 

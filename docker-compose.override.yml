@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  php:
+    volumes:
+      # Required so opening the container is vscode will give access to the .vscode folder
+      # (required for php-debug who need to access to the launch.json file)
+      - ./.vscode:/var/www/.vscode

@@ -1,0 +1,13 @@
+{
+    "name": "xDebug-Sample",
+    "dockerComposeFile": [ 
+        "./../docker-compose.yml", 
+        "./../docker-compose.override.yml" 
+    ],
+    "service": "php",
+    "workspaceFolder": "/var/www",
+    "settings": {},
+    "extensions": [
+        "felixfbecker.php-debug"
+    ]
+}

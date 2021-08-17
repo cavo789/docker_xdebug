@@ -5,12 +5,12 @@
             "name": "Listen for XDebug - Docker app",
             "type": "php",
             "request": "launch",
-            "port": 9001,
-            "log": false,
-            "externalConsole": false,
+            "port": 9002,
+            "log": true,
+            "externalConsole": true,
             "ignore": ["**/vendor/**/*.php"],
             "pathMappings": {
-                "/var/www/html": "${workspaceFolder}/src"
+                "/var/www/html": "${workspaceFolder}/html"
             }
         }
     ]

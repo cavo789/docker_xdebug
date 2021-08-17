@@ -1,0 +1,7 @@
+/.devcontainer/
+/.docker/
+/images/
+banner.svg
+*docker-*
+LICENSE
+readme.md
