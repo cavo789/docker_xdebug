@@ -2,16 +2,21 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Listen for XDebug - Docker app",
+            "name": "Listen for XDebug",
             "type": "php",
             "request": "launch",
-            "port": 9002,
-            "log": true,
-            "externalConsole": true,
-            "ignore": ["**/vendor/**/*.php"],
-            "pathMappings": {
-                "/var/www/html": "${workspaceFolder}/html"
-            }
+            "port_comment": "Make sure port is set to the same value of xdebug.client_port in your xdebug.ini file",
+            "port": 9003,
+            "hostname_comment": "Important! 0.0.0.0 is the address to bind when listening for xDebug. 0.0.0.0 means `host.docker.internal` which should be the value to use in xdebug.ini for the xdebug.client_host key",
+            "hostname": "0.0.0.0",
+            "ignore": ["**/bin/**/*","**/vendor/**/*"],
+            "internalConsoleOptions": "openOnSessionStart",
+            "pathMappings": { 
+                "/var/www/src": "${workspaceRoot}/src"
+            },
+            "stopOnEntry_comment": "When true, the debugger will halt on the first PHP instruction that is being fired. Just like if a breakpoint was manually put on that line in the code",
+            "stopOnEntry": false,
+            "log": false
         }
     ]
 }

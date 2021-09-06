@@ -9,4 +9,12 @@ COPY ./.docker/webserver/demo.apache.conf /usr/local/apache2/conf/demo.apache.co
 RUN echo "Include /usr/local/apache2/conf/demo.apache.conf" \
     >> /usr/local/apache2/conf/httpd.conf
 
-WORKDIR /var/www/html
+RUN mkdir -p /var/www/src
+
+WORKDIR /var/www/src
+
+# Copy files from the host to Docker - start #########################
+COPY src .
+COPY ./.docker/webserver/demo.apache.conf /usr/local/apache2/conf/demo.apache.conf
+# Copy files from the host to Docker - end ###########################
+

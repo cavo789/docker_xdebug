@@ -1,5 +1,5 @@
 {
-    "name": "xDebug-Sample",
+    "name": "xDebug-vscode-Sample",
     "dockerComposeFile": [ 
         "./../docker-compose.yml", 
         "./../docker-compose.override.yml" 

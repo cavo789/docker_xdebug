@@ -1,13 +1,13 @@
-# Docker - xDebug
+# Docker - Set up your vscode environment with xDebug
 
 ![Banner](./banner.svg)
 
 * Make sure [Docker](https://www.docker.com/products/docker-desktop) is installed,
 * Make sure you've installed the [PHP Debug](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug) vscode addon of **Felix Becker**,
 * Clone this repo in f.i. the `~/repos/` folder,
-* In a DOS Prompt Session, go inside the folder of this project (`cd ~/repos/docker_xdebug`),
+* In a CLI session, go inside the folder of this project (`cd ~/repos/docker_xdebug`),
 * Run `docker-compose up --build -d` and wait until the image has been created,
-* Test the image: surf to `http://localhost/?name=John Doe` and you must see *Hello John Doe!*,
+* Test the image: surf to `http://localhost:8080/?name=John Doe` and you must see *Hello John Doe!*,
 * Open Visual Studio Code and edit the `src/index.php` file,
 * Put a breakpoint on a line (select the line and press <kbd>F9</kbd>)
 
