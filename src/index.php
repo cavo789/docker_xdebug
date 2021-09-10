@@ -13,7 +13,7 @@
             <h1 class="title">Docker - Set up your vscode environment with xDebug</h1>
             <div class="content">
                 <?php
-
+                    date_default_timezone_set('Europe/Brussels');
                     printf("<h2>%s</h2>", date("l, F jS Y G:i:s"));
                     printf("<h2>%s</h2>", "PHP v". phpversion());
 
@@ -36,9 +36,9 @@
                         );
                     }
 
+                    // Add a breakpoint on the line below (press F9 in VSCode then press F5 to start a debugging session)
                     $name = $_REQUEST['name'] ?? 'John Doe';
 
-                    // Add a breakpoint on the line below (press F9 in VSCode then press F5 to start a debugging session)
                     echo "<p>Hello " . $name . "!, your name is <a href='?name=Denzel%20Washington'>" . $name . "</a> right?</p>";;
                 ?>
 
@@ -48,7 +48,7 @@
                     <li>Make sure Xdebug is installed and enabled,</li>
                     <li>Open Visual Studio Code and this project (run <code>code .</code> in a console),</li>
                     <li>Edit the <code>src/index.php</code> file,</li>
-                    <li>Locate and add a breakpoint one the line with the <code>echo "&lt;p&gt;Hello ..."</code> (click somewhere on that line and press <kbd>F9</kbd>)</i>
+                    <li>Navigate and add a breakpoint one the line with the <code>echo "&lt;p&gt;Hello ..."</code> (click somewhere on that line and press <kbd>F9</kbd>)</i>
                     <li>Still inside VSCode, press <kbd>F5</kbd> to start the debugging session,</li>
                     <li>Go back in the browser tab and press <kbd>F5</kbd> to refresh the page.</li>
                 </ol>

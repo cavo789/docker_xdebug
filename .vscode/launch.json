@@ -13,7 +13,7 @@
                 "/var/www/html": "${workspaceRoot}/src"
             },
             "stopOnEntry": false,
-            "log": true
+            "log": false
         }
     ]
 }

@@ -15,11 +15,17 @@ cat <<\EOF
 
 EOF
 
+if [ ! -f ".env" ]; then
+    printf '\e[1;31m%-6s\n\e[m' "Warning: the file \".env\" is missing."
+    printf '\e[1;31m%-6s\n\e[m' "Please run \"cp .env.example .env\" to create the file then edit it to adjust the settings to your needs."
+    exit 1
+fi
 
 if [ ! -f "docker-compose.override.yml" ]; then
     printf '\e[1;33m%-6s\n\e[m' "Warning: the file \"docker-compose.override.yml\" didn't exist so Xdebug won't be enabled."
     printf '\e[1;33m%-6s\n\e[m' "If you want it, please run \"cp docker-compose.override.yml.dev docker-compose.override.yml\" to create the file first."
-    printf '\e[1;33m%-6s\n\n\e[m' "(the file \"docker-compose.override.yml\" will enable the development environment)"
+    printf '\e[1;33m%-6s\n\e[m' "(the file \"docker-compose.override.yml\" will enable the development environment)"
+    printf '\e[1;33m%-6s\n\n\e[m' "Also make sure to edit the \".env\" file and configure it to fit your needs."
 
     printf '\e[1;32m%-6s\n\n\e[m' "Running Docker in a PROD environment"
     
