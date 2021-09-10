@@ -15,7 +15,18 @@ cat <<\EOF
 
 EOF
 
-printf '\e[1;32m%-6s\n\n\e[m' "Run docker-compose..."
+
+if [ ! -f "docker-compose.override.yml" ]; then
+    printf '\e[1;33m%-6s\n\e[m' "Warning: the file \"docker-compose.override.yml\" didn't exist so Xdebug won't be enabled."
+    printf '\e[1;33m%-6s\n\e[m' "If you want it, please run \"cp docker-compose.override.yml.dev docker-compose.override.yml\" to create the file first."
+    printf '\e[1;33m%-6s\n\n\e[m' "(the file \"docker-compose.override.yml\" will enable the development environment)"
+
+    printf '\e[1;32m%-6s\n\n\e[m' "Running Docker in a PROD environment"
+    
+else
+    printf '\e[1;32m%-6s\n\n\e[m' "Running Docker in a DEV environment (with xDebug installed based on .env settings)"
+fi
+
 docker-compose up -d
 
 # Read configuration from the .env file

@@ -8,34 +8,54 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 <body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Docker - Set up your vscode environment with xDebug</h1>
+            <div class="content">
+                <?php
 
-<section class="section">
-    <div class="container">
-        <h1 class="title">Docker - Set up your vscode environment with xDebug</h1>
-        <div class="content">
-            <?php
-                $name = $_REQUEST['name'] ?? 'John Doe';
+                    printf("<h2>%s</h2>", date("l, F jS Y G:i:s"));
+                    printf("<h2>%s</h2>", "PHP v". phpversion());
 
-                // Add a breakpoint on the line below (press F9 in VSCode then press F5 to start a debugging session)
-                echo "<p>Hello " . $name . "!, your name is <a href='?name=Denzel%20Washington'>" . $name . "</a> right?</p>";;
-            ?>
+                    if (!extension_loaded('xdebug')) {
+                        printf(
+                            '<div style="padding:10px;" class="has-background-danger-dark has-text-white"><p>%s</p>'.
+                            '<ol><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ol></div>',
+                            'XDebug IS NOT INSTALLED. Please make sure:',
+                            'the XDEBUG_INSTALL variable in your .env file is set to true,',
+                            'you\'ve copy the file docker-compose.override.yml.dev and create docker-compose.override.yml,',
+                            'restart Docker (run "./docker-down.sh ; ./docker-up.sh" in a console)',
+                            'refresh this page'
+                        );
+                        die();
+                    } else {
+                        printf(
+                            '<div style="padding:10px;" class="has-background-primary-dark has-text-white"><p>%s</p><p>%s</p></div><br/>',
+                            'Congratulations, Xdebug v'.phpversion('xdebug').' IS INSTALLED AND ENABLED.',
+                            'You can now go to your editor, add a breakpoint, press <kbd>F5</kbd> and refresh this page.'
+                        );
+                    }
 
-            <h2>Step by step debugging</h2>
+                    $name = $_REQUEST['name'] ?? 'John Doe';
 
-            <ol>
-                <li>Copy the file <em>docker-compose.override.yml.dev</em> to <em>docker-compose.override.yml</em>,</li>
-                <li>Run the <em>./docker-down.sh ; ./docker-up.sh</em> command in Linux to build the Docker services with php_debug enabled,</li>
-                <li>Open Visual Studio Code,</li>
-                <li>Open this project,</li>
-                <li>Edit the <em>src/index.php</em> file,</li>
-                <li>Add a breakpoint one the line with the <cite>echo "&lt;p&gt;Hello ..."</cite> (click somewhere on that line and press <kbd>F9</kbd>)</i>
-                <li>Press <kbd>F5</kbd> to start the debugging session.</li>
-                <li>Go back in the browser tab and press <kbd>F5</kbd> to refresh the page.</li>
-            </ol>
+                    // Add a breakpoint on the line below (press F9 in VSCode then press F5 to start a debugging session)
+                    echo "<p>Hello " . $name . "!, your name is <a href='?name=Denzel%20Washington'>" . $name . "</a> right?</p>";;
+                ?>
 
-            <p>If everything goes fine, VSCode will be in debug mode. The execution will be stopped on the line where you've put a breakpoint.</p>
+                <h2>Step by step debugging</h2>
 
-            <p>In the <em>Debug Console</em>, type <em>$name='Christophe';</em> and press <kbd>Enter</kbd> to validate the change to that variable. Press <kbd>F5</kbd> to continue the execution of the script. The HTML page should reflect your change.</p>
+                <ol>
+                    <li>Make sure Xdebug is installed and enabled,</li>
+                    <li>Open Visual Studio Code and this project (run <code>code .</code> in a console),</li>
+                    <li>Edit the <code>src/index.php</code> file,</li>
+                    <li>Locate and add a breakpoint one the line with the <code>echo "&lt;p&gt;Hello ..."</code> (click somewhere on that line and press <kbd>F9</kbd>)</i>
+                    <li>Still inside VSCode, press <kbd>F5</kbd> to start the debugging session,</li>
+                    <li>Go back in the browser tab and press <kbd>F5</kbd> to refresh the page.</li>
+                </ol>
+
+                <p>If everything goes fine, VSCode will be in debug mode. The execution will be stopped on the line where you've put a breakpoint.</p>
+
+                <p>In the <em>Debug Console</em>, type <em>$name='Christophe';</em> and press <kbd>Enter</kbd> to validate the change to that variable. Press <kbd>F5</kbd> to continue the execution of the script. The HTML page should reflect your change.</p>
 
             </div>
         </div>

@@ -4,17 +4,16 @@ RUN apk update; \
     apk upgrade;
 
 # Copy apache vhost file to proxy php requests to php-fpm container
-COPY ./.docker/webserver/demo.apache.conf /usr/local/apache2/conf/demo.apache.conf
+COPY .docker/webserver/demo.apache.conf /usr/local/apache2/conf/demo.apache.conf
 
 RUN echo "Include /usr/local/apache2/conf/demo.apache.conf" \
     >> /usr/local/apache2/conf/httpd.conf
 
-RUN mkdir -p /var/www/src
+RUN mkdir -p /var/www/html
 
-WORKDIR /var/www/src
+WORKDIR /var/www/html
 
 # Copy files from the host to Docker - start #########################
 COPY src .
-COPY ./.docker/webserver/demo.apache.conf /usr/local/apache2/conf/demo.apache.conf
 # Copy files from the host to Docker - end ###########################
 

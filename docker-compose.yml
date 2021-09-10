@@ -8,8 +8,6 @@ services:
       dockerfile: ./.docker/webserver/Dockerfile
     depends_on:
       - php
-    networks:
-      - backend
     expose:
       - ${APACHE_PORT}
     ports:
@@ -23,10 +21,3 @@ services:
       args:
         - APPLICATION_NAME=${APPLICATION_NAME}
         - PHP_VERSION=${PHP_VERSION}
-    networks:
-      - backend
-      - frontend
-
-networks:
-  frontend:
-  backend:
