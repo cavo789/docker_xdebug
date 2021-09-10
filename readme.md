@@ -45,7 +45,7 @@ If you don't have that one, make sure you've correctly updated the `.env` file a
 ## Start a debugging session
 
 1. Open Visual Studio Code and open the project (in a console, just run `code .` to do this),
-2. Make sure you've installed the [PHP Debug](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug) vscode addon of **Felix Becker** (note: you don't need to have that extension if you'll work remotly, see below),
+2. Make sure you've installed the [PHP Debug](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug) vscode addon of **Felix Becker** (note: you don't need to have that extension if you'll work remotely, see below),
 3. Open the `src/index.php` file,
 4. Navigate and add a breakpoint one the line with the `$name = $_REQUEST['name'] ...` (click somewhere on that line and press <kbd>F9</kbd>. you'll see a red bullet in the left margin like illustrated below)
 
@@ -60,6 +60,14 @@ If you don't have that one, make sure you've correctly updated the `.env` file a
   ![index during the debugging](./images/debug_step_by_step.png)
 
 The execution has been suspended on the highlighted line. Just press <kbd>F5</kbd> in vscode to continue the execution of the script (and go to the next breakpoint if there is one).
+
+### Work remotely, in the container
+
+You can start Visual Code and work locally (on your host) or remotely (directly inside the Docker image). Working remotely will give you a better debugging experience since, remotely also means that you'll have access to the `~/vendor` folder f.i.
+
+Working remotely will also use the definition of the `devcontainer.json` file to correctly configure vscode. 
+
+Concretely: in vscode, press <kbd>CTRL</kbd>-<kbd>P</kbd> to get access to the command palette and select `Remote-Containers: Reopen in Container`.
 
 ### Show the debug pane and play with a variable
 

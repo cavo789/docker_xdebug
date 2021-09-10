@@ -46,7 +46,7 @@
 
                 <ol>
                     <li>Make sure Xdebug is installed and enabled,</li>
-                    <li>Open Visual Studio Code and this project (run <code>code .</code> in a console),</li>
+                    <!-- <li>Open Visual Studio Code and this project (run <code>code .</code> in a console),</li> -->
                     <li>Edit the <code>src/index.php</code> file,</li>
                     <li>Navigate and add a breakpoint one the line with the <code>echo "&lt;p&gt;Hello ..."</code> (click somewhere on that line and press <kbd>F9</kbd>)</i>
                     <li>Still inside VSCode, press <kbd>F5</kbd> to start the debugging session,</li>

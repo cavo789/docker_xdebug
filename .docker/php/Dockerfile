@@ -65,5 +65,6 @@ RUN /bin/bash -c "echo \"PS1='\e[0;33mDOCKER - ${APPLICATION_NAME}\e[0m - \e[0;3
 WORKDIR /var/www/html
 
 # Copy files from the host to Docker - start #########################
-COPY --chown=${OS_USERNAME}:${OS_USERNAME} src .
+COPY --chown=${OS_USERNAME}:${OS_USERNAME} .vscode /var/www/.vscode
+COPY --chown=${OS_USERNAME}:${OS_USERNAME} src /var/www/html
 # Copy files from the host to Docker - end ###########################

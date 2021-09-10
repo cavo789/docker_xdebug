@@ -16,6 +16,8 @@ services:
       # Allow to sync the /src folder of the development machine to the
       # /var/www/html folder in the Docker container.
       - ./src:/var/www/html
+      # Settings for vscode to allow working in the container
+      - ./.vscode:/var/www/.vscode
       # Synchronize the ini file for PHP with the configuration for xDebug
       # use the v2 or the v3 configuration file based on the xDebug version used.
       - ./.docker/php/conf.d/xdebug_v${XDEBUG_MAJOR_VERSION}.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
