@@ -1,18 +1,5 @@
 <?php
 
-/**
- * Project name
- * php version 7.4
- *
- * Project description
- *
- * @package   project_name
- * @author    "Firstname Lastname <firstname.lastname@bosa.fgov.be>"
- * @copyright 2021-2021 (c) SPF BOSA IOD AS - PHP Dev Team
- * @license   proprietary <https://bosa.belgium.be/>
- *
- */
-
 $finder = PhpCsFixer\Finder::create()
     ->in('.')
     ->exclude([

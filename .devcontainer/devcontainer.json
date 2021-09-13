@@ -19,11 +19,11 @@
         },
         "intelephense.environment.phpVersion": "7.4.16",
         "php.validate.executablePath": "/usr/local/bin/php",
-        // "php-cs-fixer.config": ".config/.php-cs-fixer.php",
-        // "php-cs-fixer.executablePath": "/usr/local/bin/php-cs-fixer.phar",
-        // "phpcbf.executablePath": "/usr/local/bin/phpcbf.phar",
-        // "phpcbf.standard": ".config/phpcs.xml",
-        // "prettier.configPath": ".config/.prettierrc.js",
+        "php-cs-fixer.config": ".config/.php-cs-fixer.php",
+        "php-cs-fixer.executablePath": "/usr/local/bin/php-cs-fixer.phar",
+        "phpcbf.executablePath": "/usr/local/bin/phpcbf.phar",
+        "phpcbf.standard": ".config/phpcs.xml",
+        "prettier.configPath": ".config/.prettierrc.js",
         "redhat.telemetry.enabled": false,
         "telemetry.enableCrashReporter": false,
         "shellcheck.run": "onSave",
@@ -54,8 +54,8 @@
             "editor.wrappingIndent": "indent"
         },
         "[php]": {
-            "files.trimTrailingWhitespace": true
-            // "editor.defaultFormatter": "junstyle.php-cs-fixer"
+            "files.trimTrailingWhitespace": true,
+            "editor.defaultFormatter": "junstyle.php-cs-fixer"
         },
         "[shellscript]": {
             "editor.defaultFormatter": "foxundermoon.shell-format",
@@ -72,15 +72,21 @@
         }
     },
     "extensions": [
-        // "dbaeumer.vscode-eslint",
-        // "felixfbecker.php-debug",
-        // "foxundermoon.shell-format",
-        // // "junstyle.php-cs-fixer",
-        // "ms-azuretools.vscode-docker",
-        // "neilbrayfield.php-docblocker",
-        // "randrade23.beautify-json",
-        // "redhat.vscode-xml",
-        // "redhat.vscode-yaml",
-        // "yzhang.markdown-all-in-one"
+        "bmewburn.vscode-intelephense-client",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "felixfbecker.php-debug",
+        "felixfbecker.php-intellisense",
+        "felixfbecker.php-pack",
+        "foxundermoon.shell-format",
+        "junstyle.php-cs-fixer",
+        "ms-azuretools.vscode-docker",
+        "neilbrayfield.php-docblocker",
+        "persoderlind.vscode-phpcbf",
+        "randrade23.beautify-json",
+        "redhat.vscode-xml",
+        "redhat.vscode-yaml",
+        "timonwong.shellcheck",
+        "yzhang.markdown-all-in-one"
     ]
 }

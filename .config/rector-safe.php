@@ -2,19 +2,6 @@
 
 declare(strict_types = 1);
 
-/**
- * Project name
- * php version 7.4
- *
- * Project description
- *
- * @package   project_name
- * @author    "Firstname Lastname <firstname.lastname@bosa.fgov.be>"
- * @copyright 2021-2021 (c) SPF BOSA IOD AS - PHP Dev Team
- * @license   proprietary <https://bosa.belgium.be/>
- *
- */
-
 use Rector\CodeQuality\Rector\Identical\FlipTypeControlToUseExclusiveTypeRector;
 use Rector\CodeQuality\Rector\Return_\SimplifyUselessVariableRector;
 use Rector\CodeQualityStrict\Rector\Variable\MoveVariableDeclarationNearReferenceRector;

@@ -2,19 +2,6 @@
 
 declare(strict_types = 1);
 
-/**
- * GitHooks
- * php version 7.4
- *
- * @package   GitHooks
- * @author    "Christophe Avonture <christophe.avonture@bosa.fgov.be>"
- * @copyright 2018-2021 (c) SPF BOSA IOD AS - PHP Dev Team
- * @license   proprietary <https://bosa.belgium.be/>
- *
- * @link code.bosa.fgov.be/dg-iod/dg-iod-resources/githooks
- * @wiki https://code.bosa.fgov.be/dg-iod/dg-iod-resources/githooks/-/wikis/home
- */
-
 use Rector\Core\Configuration\Option;
 use Rector\Set\ValueObject\SetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;

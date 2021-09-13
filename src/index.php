@@ -14,12 +14,12 @@
             <div class="content">
                 <?php
                     date_default_timezone_set('Europe/Brussels');
-                    printf("<h2>%s</h2>", date("l, F jS Y G:i:s"));
-                    printf("<h2>%s</h2>", "PHP v". phpversion());
+                    printf('<h2>%s</h2>', date('l, F jS Y G:i:s'));
+                    printf('<h2>%s</h2>', 'PHP v' . phpversion());
 
                     if (!extension_loaded('xdebug')) {
                         printf(
-                            '<div style="padding:10px;" class="has-background-danger-dark has-text-white"><p>%s</p>'.
+                            '<div style="padding:10px;" class="has-background-danger-dark has-text-white"><p>%s</p>' .
                             '<ol><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ol></div>',
                             'XDebug IS NOT INSTALLED. Please make sure:',
                             'the XDEBUG_INSTALL variable in your .env file is set to true,',
@@ -31,15 +31,15 @@
                     } else {
                         printf(
                             '<div style="padding:10px;" class="has-background-primary-dark has-text-white"><p>%s</p><p>%s</p></div><br/>',
-                            'Congratulations, Xdebug v'.phpversion('xdebug').' IS INSTALLED AND ENABLED.',
+                            'Congratulations, Xdebug v' . phpversion('xdebug') . ' IS INSTALLED AND ENABLED.',
                             'You can now go to your editor, add a breakpoint, press <kbd>F5</kbd> and refresh this page.'
                         );
                     }
 
-                    // Add a breakpoint on the line below (press F9 in VSCode then press F5 to start a debugging session)
-                    $name = $_REQUEST['name'] ?? 'John Doe';
+        // Add a breakpoint on the line below (press F9 in VSCode then press F5 to start a debugging session)
+        $name = $_REQUEST['name'] ?? 'John Doe';
 
-                    echo "<p>Hello " . $name . "!, your name is <a href='?name=Denzel%20Washington'>" . $name . "</a> right?</p>";;
+        echo '<p>Hello ' . $name . "!, your name is <a href='?name=Denzel%20Washington'>" . $name . '</a> right?</p>';
                 ?>
 
                 <h2>Step by step debugging</h2>
