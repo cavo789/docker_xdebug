@@ -67,7 +67,7 @@ You can start Visual Code and work locally (on your host) or remotely (directly 
 
 Working remotely will also use the definition of the `devcontainer.json` file to correctly configure vscode. 
 
-Concretely: in vscode, press <kbd>CTRL</kbd>-<kbd>P</kbd> to get access to the command palette and select `Remote-Containers: Reopen in Container`.
+Concretely: in vscode, press <kbd>CTRL</kbd>-<kbd>SHIFT</kbd>-<kbd>P</kbd> to get access to the command palette and select `Remote-Containers: Reopen in Container`.
 
 ### Show the debug pane and play with a variable
 

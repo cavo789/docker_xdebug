@@ -52,7 +52,7 @@ COPY .docker/php/conf.d/xdebug_v${XDEBUG_MAJOR_VERSION}.ini /usr/local/etc/php/c
 # Switch from root to our Linux user. Note that from now, permissions are more restrictive.
 # We can put this line in comment and run everything as root but it's a bad idea since the idea
 # under Docker is to be as close as possible to the test / production server
-USER ${OS_USERNAME}
+# USER ${OS_USERNAME}
 
 # --------------------------------------------------------
 #! As from here, the Linux user is ours, no more root:root
