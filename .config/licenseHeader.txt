@@ -1,0 +1,4 @@
+This file is part of the Federal Data Manager application; part of
+the Crescendo 2 applications suite
+(c) SPF BOSA IOD AS - PHP Dev Team
+2018 - 2020

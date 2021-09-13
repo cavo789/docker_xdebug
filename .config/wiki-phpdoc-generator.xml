@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wiki-php-documentor>
+    <branch-name>dev</branch-name>
+    <debug-twig>0</debug-twig>
+    <debug>0</debug>
+    <laravel>1</laravel>
+    <output-temporary>.output</output-temporary>
+    <phpdoc-path>bin/phpDocumentor.phar</phpdoc-path>
+    <phpdoc-xml>.config/phpdoc.xml</phpdoc-xml>
+    <project-name>bosa/federal_data_manager</project-name>
+    <repository-url>https://code.bosa.fgov.be/dg-r_o/crescendo-2.0/federaldatamanager</repository-url>
+    <samples-path>/tests/data</samples-path>
+    <sources>app</sources>
+    <templates>.config/templates</templates>
+    <uat-url></uat-url>
+    <wiki-laraveldoc-path>laravel_doc</wiki-laraveldoc-path>
+    <wiki-phpdoc-path>php_doc</wiki-phpdoc-path>
+</wiki-php-documentor>

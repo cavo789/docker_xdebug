@@ -1,13 +1,86 @@
 {
-    "name": "xDebug-vscode-Sample",
+    "name": "myDockerApp",
     "dockerComposeFile": [ 
         "./../docker-compose.yml", 
         "./../docker-compose.override.yml" 
     ],
     "service": "php",
     "workspaceFolder": "/var/www",
-    "settings": {},
+    "forwardPorts" : [ ],
+    "settings": {
+        // "better-phpunit.phpunitBinary": "/usr/local/bin/phpunit.phar",
+        "editor.wordBasedSuggestionsMode": "allDocuments",
+        "files.associations": {
+            "*.blade.php": "php",
+            "*.json.dist": "json",
+            "*.php-cs": "php",
+            "*.yml.dev": "yaml",
+            "*.yml.dist": "yaml"
+        },
+        "intelephense.environment.phpVersion": "7.4.16",
+        "php.validate.executablePath": "/usr/local/bin/php",
+        // "php-cs-fixer.config": ".config/.php-cs-fixer.php",
+        // "php-cs-fixer.executablePath": "/usr/local/bin/php-cs-fixer.phar",
+        // "phpcbf.executablePath": "/usr/local/bin/phpcbf.phar",
+        // "phpcbf.standard": ".config/phpcs.xml",
+        // "prettier.configPath": ".config/.prettierrc.js",
+        "redhat.telemetry.enabled": false,
+        "telemetry.enableCrashReporter": false,
+        "shellcheck.run": "onSave",
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "[dockerfile]": {
+            "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+        },
+        "[html]": {
+            "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+            "editor.formatOnSave": true
+        },
+        "[json]": {
+            "editor.defaultFormatter": "randrade23.beautify-json",
+            "editor.formatOnSave": true
+        },
+        "[jsonc]": {
+            "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+            "editor.formatOnSave": true,
+            "editor.wordWrap": "wordWrapColumn",
+            "editor.wordWrapColumn": 80,
+            "editor.wrappingIndent": "indent"
+        },
+        "[markdown]": {
+            "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+            "editor.formatOnSave": true,
+            "editor.wordWrap": "wordWrapColumn",
+            "editor.wordWrapColumn": 80,
+            "editor.wrappingIndent": "indent"
+        },
+        "[php]": {
+            "files.trimTrailingWhitespace": true
+            // "editor.defaultFormatter": "junstyle.php-cs-fixer"
+        },
+        "[shellscript]": {
+            "editor.defaultFormatter": "foxundermoon.shell-format",
+            "editor.formatOnSave": true
+        },
+        "[yaml]": {
+            "editor.defaultFormatter": "redhat.vscode-yaml"
+        },
+        "[xml]": {
+            "editor.defaultFormatter": "redhat.vscode-xml",
+            "editor.wordWrap": "wordWrapColumn",
+            "editor.wordWrapColumn": 80,
+            "editor.wrappingIndent": "indent"
+        }
+    },
     "extensions": [
-        "felixfbecker.php-debug"
+        // "dbaeumer.vscode-eslint",
+        // "felixfbecker.php-debug",
+        // "foxundermoon.shell-format",
+        // // "junstyle.php-cs-fixer",
+        // "ms-azuretools.vscode-docker",
+        // "neilbrayfield.php-docblocker",
+        // "randrade23.beautify-json",
+        // "redhat.vscode-xml",
+        // "redhat.vscode-yaml",
+        // "yzhang.markdown-all-in-one"
     ]
 }

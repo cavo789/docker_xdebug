@@ -2,6 +2,8 @@
 
 ![Banner](./banner.svg)
 
+**Xdebug & breakpoints are working when running the project inside vscode but not when started from a devcontainer.**
+
 The objective of this repository is to provide the minimum requirements for launching a PHP project that will run:
 
 * Under Docker,
