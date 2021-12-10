@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Docker - Set up your vscode environment with xDebug</title>
+    <title>Docker - Set up your vscode environment with Xdebug</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 <body>
     <section class="section">
         <div class="container">
-            <h1 class="title">Docker - Set up your vscode environment with xDebug</h1>
+            <h1 class="title">Docker - Set up your vscode environment with Xdebug</h1>
             <div class="content">
                 <?php
+                phpinfo();
+
                     date_default_timezone_set('Europe/Brussels');
                     printf('<h2>%s</h2>', date('l, F jS Y G:i:s'));
                     printf('<h2>%s</h2>', 'PHP v' . phpversion());
+
+var_dump(phpversion());
 
                     if (!extension_loaded('xdebug')) {
                         printf(
                             '<div style="padding:10px;" class="has-background-danger-dark has-text-white"><p>%s</p>' .
                             '<ol><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ol></div>',
-                            'XDebug IS NOT INSTALLED. Please make sure:',
+                            'Xdebug IS NOT INSTALLED. Please make sure:',
                             'the XDEBUG_INSTALL variable in your .env file is set to true,',
                             'you\'ve copy the file docker-compose.override.yml.dev and create docker-compose.override.yml,',
                             'restart Docker (run "./docker-down.sh ; ./docker-up.sh" in a console)',
